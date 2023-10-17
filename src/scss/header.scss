@@ -1,0 +1,206 @@
+
+// Burger (**==MW==**) ====================================================================================================//
+
+// Запрещаем скролл основного контента при открытом бургере
+body._lock {
+	overflow: hidden;
+}
+// Прячем бургер на больших экранах
+.menu__icon {
+	//display: none;
+}
+
+//@media (max-width: $mobile) {
+	//.menu__icon {
+	//	display: block;
+	//	position: relative;
+	//	width: rem(30);
+	//	height: rem(18);
+	//	cursor: pointer;
+	//	z-index: 5;
+	//// Три полоски
+	//	span,
+	//	&::before,
+	//	&::after {
+	//		content: "";
+	//		transition: all 0.3s ease 0s;
+	//		right: 0;
+	//		position: absolute;
+	//		width: 100%;
+	//		height: rem(2); //10%
+	//		background-color: #fff;
+	//	}
+	//	&::before {
+	//		top: 0;
+	//	}
+	//	&::after {
+	//		bottom: 0;
+	//	}
+	//	span {
+	//		top: calc(50% - rem(1)); //transform: scale(1) translate(0px -50%);
+	//	}
+	//}
+
+	//.menu__icon._active {
+	//	span {
+	//		width: 0;
+	//	}
+	//	&::before,
+	//	&::after {
+	//	}
+	//	&::before {
+	//		top: calc(50% - rem(1));
+	//		transform: rotate(-45deg);
+	//	}
+	//	&::after {
+	//		bottom: calc(50% - rem(1));
+	//		transform: rotate(45deg);
+	//	}
+	//}
+
+	.menu__body {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.93);
+		padding: 100px 30px 30px 30px;
+		transition: left 0.3s ease 0s;
+		overflow: auto; // Добавляем скролл
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+	}
+
+		// Рисуем шапку
+	.menu__body{
+		&::before {
+			content: '';
+			position: fixed;
+			width: 100%;
+			top: 0;
+			left: -100%;
+			height: 100px; // Высота шапки
+			background-color: #000;
+			z-index: 20;
+			transition: left 0.3s ease 0s;
+			@media (max-width: 767px) {
+				height: 70px;
+			}
+		}
+	}
+	body._lock .menu__body{
+		
+		&::before {
+			content: '';
+			left: 0;
+		}
+	}
+
+	// Выезд меню-бургера при нажатии на бургер
+	.menu__body._active {
+		left: 0;
+	}
+//}
+
+//  ====================================================================================================//
+
+body{
+	//background-color: #9d9d9d;
+}
+
+.header {
+	position: fixed;
+	z-index: 15;
+	width: 100%;
+	@media (min-width: 992px) {
+		background: rgba(0, 0, 0, 0.40);
+	}
+	@media (max-width: 767px) {
+		height: 70px;
+	}
+	&__container {
+	}
+	&__menu {
+		display: flex;
+		height: 100px;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 767px) {
+			height: 70px;
+		}
+	}
+}
+.menu {
+	&__icon {
+		cursor: pointer;
+		position: relative;
+		z-index: 5;
+		&_open {
+			display: none;
+		}
+		&_close {
+		}
+	}
+	&__logo {
+		align-self: flex-end;
+		position: relative;
+		z-index: 5;
+		@media (max-width: 767px) {
+			align-self: center;
+			svg{
+				max-width: 120px;
+			}
+		}
+	}
+	&__body {
+		text-align: center;
+	}
+	&__list {
+		color: #828282;
+		@include adaptiveValue("padding-top", 80, 0, 1770, 650, 1);
+		@include adaptiveValue("font-size", 48, 30);
+		font-weight: 300;
+		li{
+			&:not(:last-child){
+				//padding-bottom: 50px;
+				@include adaptiveValue("padding-bottom", 15, 0, 1770, 767, 1);
+			}
+			a{
+				//transition: outline 0.3s ease 0s;
+				display: inline-block;
+				line-height: 130%;
+				padding: 20px 40px;
+				@media (max-width: 767px) {
+					padding: 15px 30px;
+				}
+			}
+			a:hover{
+				display: inline-block;
+				outline: 1px solid #F2F2F2;
+			}
+		}
+	}
+	&__social {
+		display: flex;
+		@include adaptiveValue("margin-top", 85, 40);
+		@include adaptiveValue("gap", 65, 30);
+		justify-content: center;
+		@media (max-width: 550px) {
+			flex-wrap: wrap;
+			li{
+				flex: 0 1 25%
+			}
+		}
+	}
+	&__call {
+		cursor: pointer;
+		position: relative;
+		z-index: 5;
+	}
+}
+.menu-link {
+}
+.social-link {
+}

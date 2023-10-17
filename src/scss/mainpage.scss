@@ -1,0 +1,53 @@
+.page {
+}
+
+//* main-screen ====================================================================================================//
+
+.main-screen {
+	position: relative;
+	padding-top: 100px;
+	height: 100vh;
+	background: linear-gradient(164deg, rgba(0, 0, 0, 0.40) -9.9%, rgba(0, 0, 0, 0.29) 113.34%);
+		&__container {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			//justify-content: center;
+			align-items: center;
+		}
+		&__body {
+			flex: 1 1 auto;
+			@include adaptiveValue("margin-top", 80, 40);
+		}
+		&__title {
+			text-align: center;
+			@include adaptiveValue("font-size", 80, 50);
+			color: #F2F2F2;
+			font-weight: 300;
+			@include adaptiveValue("padding-bottom", 190, 120);
+		}
+		&__buttons {
+			display: flex;
+			gap: 50px;
+			@include adaptiveValue("gap", 50, 30, 1770, 767, 1);
+			@media (max-width: 630px) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
+		&__button {
+		}
+		&__arrow{
+			text-align: center;
+			padding: 20px 15px;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+}

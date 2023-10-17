@@ -1,0 +1,20 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.button {
+	&__gray {
+		color: #fff;
+		@include adaptiveValue("font-size", 24, 18);
+		border: 1px solid #C4C4C4;
+		background: rgba(17, 17, 17, 0.60);
+		@include adaptiveValue("height", 75, 60, 1770, 992, 1);
+		@include adaptiveValue("width", 350, 270, 1170, 992, 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			border: 1px solid #C4C4C4;
+			background: rgba(17, 17, 17, 0.90);
+		}
+	}
+}
