@@ -27,7 +27,7 @@ flsFunctions.MenuBurg();
 //===================//
 
 // Функционал добавления классов к хедеру при прокрутке
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 //===================//
 
 // Плавная навигация по странице
@@ -49,7 +49,7 @@ flsFunctions.MenuBurg();
 //===================//
 
 /* Модуль работы со спойлерами Документация:Сниппет (HTML): spollers */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 //===================//
 
 /* MW Подключение  Slick Slider + JQ*/

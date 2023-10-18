@@ -104,16 +104,13 @@ body._lock {
 	}
 //}
 
-//  ====================================================================================================//
-
-body{
-	//background-color: #9d9d9d;
-}
+//! header ====================================================================================================//
 
 .header {
 	position: fixed;
 	z-index: 15;
 	width: 100%;
+	transition: all 0.3s ease 0s;
 	@media (min-width: 992px) {
 		background: rgba(0, 0, 0, 0.40);
 	}
@@ -137,10 +134,14 @@ body{
 		cursor: pointer;
 		position: relative;
 		z-index: 5;
+		svg{
+			height: 45px;
+			width: 45px;
+		}
 		&_open {
-			display: none;
 		}
 		&_close {
+			display: none;
 		}
 	}
 	&__logo {
@@ -200,7 +201,14 @@ body{
 		z-index: 5;
 	}
 }
-.menu-link {
+
+.menu__icon._active .menu__icon_open{
+	display: none;
 }
-.social-link {
+.menu__icon._active .menu__icon_close{
+	display: block;
+}
+.header._header-scroll{
+	background: rgba(0, 0, 0, 0.80);
+	//backdrop-filter: blur(5px);
 }

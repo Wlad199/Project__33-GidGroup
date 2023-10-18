@@ -1,3 +1,186 @@
 //====================================================================================================
 
-//====================================================================================================
+.footer {
+	//background-color: #a8a8a8;
+	&__container {
+		padding-top: 540px;
+		//background: url('@img/footer/decor-1.svg') 0 100% no-repeat;
+		position: relative;
+		@media (max-width: 1100px) {
+			background-color: #000;
+			@include adaptiveValue("padding-top", 60, 40);
+		}
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("padding-bottom", 60, 30, 1770, 992, 1);
+		@media (max-width: 600px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__bottom {
+	}
+	&__copy {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 146%;
+		text-align: right;
+		padding-bottom: 30px;
+		@media (max-width: 1100px) {
+			color: #BDBDBD;
+			text-align: center;
+		@include adaptiveValue("padding-top", 30, 15, 1100, 600, 1);
+		}
+	}
+	&__decor{
+		&_1{
+			position: absolute;
+			bottom: 0;
+			left: -60px;
+			z-index: -10;
+			@media (max-width: 1700px) {
+				bottom: -180px;
+				left: -150px;
+			}
+			@media (max-width: 1500px) {
+				bottom: -240px;
+				left: -200px;
+			}
+			@media (max-width: 1250px) {
+				bottom: -280px;
+				left: -300px;
+			}
+			@media (max-width: 1100px) {
+				display: none;
+			}
+		}
+		&_2{
+			display: none;
+			position: absolute;
+			bottom: 0;
+			left: 0px;
+			z-index: -10;
+			//@media (max-width: 1700px) {
+			//	display: block;
+			//}
+		}
+		&_3{
+			display: none;
+		}
+	}
+}
+
+// top-footer =================//
+.top-footer {
+	&__logo {
+	}
+	&__social {
+		@media (max-width: 600px) {
+			flex: 0 1 100%;
+			padding-top: 25px;
+		}
+	}
+}
+.social-footer {
+	&__list {
+		display: flex;
+		@include adaptiveValue("gap", 65, 15, 1770, 600, 2);
+		@media (max-width: 600px) {
+			justify-content: space-between;
+		}
+		@media (max-width: 1100px) {
+			svg path {
+				fill: #fff;
+			}
+			.svg_m path{
+				fill: #000;
+			}
+			.svg_m rect{
+				fill: #fff;
+			}
+		}
+		@media (max-width: 767px) {
+			svg{
+				height: 35px;
+				width: 35px;
+			}
+		}
+	}
+}
+
+// bottom-footer =================//
+.bottom-footer {
+	&__body {
+		display: flex;
+		@media (max-width: 1100px) {
+			margin: 0px -10px;
+		}
+		@media (max-width: 600px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__column {
+		&:not(:last-child){
+			@include adaptiveValue("margin-right", 150, 50, 1770, 1100, 2);
+		}
+		@media (max-width: 1100px) {
+			flex: 0 1 25%;
+			padding: 0 10px;
+			@media (max-width: 600px) {
+				flex: 0 1 50%;
+				padding-bottom: 20px;
+				//text-align: center;
+			}
+		}
+	}
+	&__title {
+		color: #FAFF09;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 145%;
+		@include adaptiveValue("padding-bottom", 35, 18);
+		@media (max-width: 600px) {
+			cursor: pointer;
+			user-select: none;
+			padding-bottom: 0;
+			font-size: 20px;
+			position: relative;
+			display: inline-block;
+			padding-right: 20px;
+			&::after{
+				content: '';
+				top: 10px;
+				right: -1px;
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid #FAFF09;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+	&__list {
+		color: #f2f2f2;
+		@include adaptiveValue("font-size", 18, 16);
+		@media (max-width: 600px) {
+			padding-top: 15px;
+		}
+		li:not(:last-child){
+			padding-bottom: 12px;
+		}
+	}
+	@include adaptiveValue("padding-bottom", 230, 130, 1770, 1100, 2);
+	@media (max-width: 1100px) {
+		@include adaptiveValue("padding-bottom", 40, 10);
+	}
+}
+
+div.footer__bottom.bottom-footer > div > div:nth-child(4) > ul > li:nth-child(1) > a {
+	@include adaptiveValue("font-size", 18, 14);
+}
+.bottom-footer__title._spoller-active::after{
+	transform: rotate(-180deg);
+}
