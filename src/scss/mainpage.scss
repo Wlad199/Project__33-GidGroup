@@ -51,3 +51,105 @@
 			z-index: -1;
 		}
 }
+
+// time ====================================================================================================//
+
+.time {
+	@include adaptiveValue("padding-top", 45, 10);
+	@include adaptiveValue("padding-bottom", 60, 50);
+	&__container {
+		background-color: #F2F2F2;
+		@media (max-width: 992px) {
+			background-color: #F9F9F9;
+		}
+	}
+	&__body {
+		display: flex;
+		margin: 0px -15px;
+		@include adaptiveValue("padding-top", 40, 30);
+		@include adaptiveValue("padding-bottom", 30, 25, 1770, 992, 2);
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: 400px) {
+			padding-bottom: 20px;
+		}
+	}
+	&__column {
+		padding: 0px 15px;
+		flex: 0 1 25%;
+		color: #0E0E0E;
+		@media (max-width: 992px) {
+			flex: 0 1 50%;
+			padding-bottom: 20px;
+			&:nth-child(1){
+				@media (min-width: 400px) {
+					padding-bottom: 40px;
+				}
+			}
+			&:nth-child(2){
+				@media (min-width: 400px) {
+					padding-bottom: 40px;
+				}
+			}
+		}
+		@media (max-width: 400px) {
+			flex: 0 1 100%;
+			text-align: center;
+			padding-bottom: 30px;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 50%;
+				height: 10px;
+				width: 10px;
+				background-color: #0E0E0E;
+				transform: translateX(50%);
+			}
+		}
+	}
+	&__title {
+		@include adaptiveValue("font-size", 64, 48);
+		padding-bottom: 15px;
+		@media (max-width: 400px) {
+			padding-top: 15px;
+		}
+	}
+	&__sub-title {
+		@include adaptiveValue("font-size", 28, 18);
+		@include adaptiveValue("padding-bottom", 16, 12);
+		padding-left: 28px;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			top: -3px;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background-color: #0E0E0E;
+		}
+		@media (max-width: 992px) {
+			padding-left: 20px;
+			&::before{
+				width: 15px;
+				height: 15px;
+			}
+		}
+		@media (max-width: 400px) {
+			&::before{
+				display: none;
+			}
+		}
+	}
+	&__text {
+		@include adaptiveValue("font-size", 18, 14);
+		font-weight: 300;
+		padding-left: 28px;
+		@media (max-width: 992px) {
+			padding-left: 20px;
+		}
+	}
+}
