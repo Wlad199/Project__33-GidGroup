@@ -1,5 +1,29 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+// Title ====================================================================================================//
+
+.headline {
+	@include adaptiveValue("font-size", 48, 26);
+	font-weight: 300;
+	text-transform: uppercase;
+	position: relative;
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: -25px;
+		left: -65px;
+		@include adaptiveValue("width", 200, 130, 1770, 500, 1);
+		@include adaptiveValue("height", 10, 6, 1770, 500, 1);
+		background-color: #000;
+		@media (max-width: 767px) {
+			bottom: -15px;
+		}
+	}
+}
+
+
+//* button ====================================================================================================//
+
 .button {
 	&__gray {
 		color: #fff;
@@ -16,5 +40,23 @@
 			border: 1px solid #C4C4C4;
 			background: rgba(17, 17, 17, 0.90);
 		}
+	}
+}
+
+// button-black =================//
+
+.button-black {
+	color: #fff;
+	@include adaptiveValue("font-size", 36, 18);
+	font-weight: 300;
+	background-color: #000;
+	border: 1px solid #000;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease 0s;
+	&:hover{
+		border: 1px solid #C4C4C4;
+		background: rgba(17, 17, 17, 0.90);
 	}
 }

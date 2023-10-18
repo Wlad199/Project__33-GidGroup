@@ -35,7 +35,7 @@ flsScroll.headerScroll();
 //===================//
 
 /* Динамический адаптив */
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 //===================//
 
 /* Анимация */
