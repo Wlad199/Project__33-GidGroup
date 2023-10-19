@@ -8,6 +8,7 @@
 	text-transform: uppercase;
 	position: relative;
 	@include adaptiveValue("margin-bottom", 60, 40);
+	line-height: 120%;
 	&::after{
 		content: '';
 		position: absolute;
