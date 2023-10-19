@@ -9,6 +9,7 @@
 		@media (max-width: 1100px) {
 			background-color: #000;
 			@include adaptiveValue("padding-top", 60, 40);
+			@include adaptiveValue("margin-top", 80, 40, 1100, 320, 1);
 		}
 	}
 	&__top {

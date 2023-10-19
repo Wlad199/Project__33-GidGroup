@@ -713,3 +713,281 @@
 		}
 	}
 }
+
+//* we ====================================================================================================//
+
+.we {
+	position: relative;
+	@include adaptiveValue("padding-top", 190, 50);
+	@include adaptiveValue("padding-bottom", 220, 40);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+	&__one{
+		@media (max-width: 500px) {
+			display: none;
+		}
+	}
+	&__two{
+		display: none;
+		@media (max-width: 500px) {
+			display: block;
+		}
+	}
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+	&__container {
+	}
+	&__box{
+		@include adaptiveValue("padding-left", 500, 0, 1770, 500, 2);
+	}
+	&__title {
+		@include adaptiveValue("font-size", 48, 18);
+		color: #fff;
+		line-height: 146%;
+		font-weight: 300;
+		@include adaptiveValue("padding-bottom", 100, 20);
+		@media (max-width: 500px) {
+			text-align: center;
+		}
+	}
+	&__list {
+		li{
+			padding-left: 40px;
+			@include adaptiveValue("font-size", 36, 16);
+			font-weight: 300;
+			line-height: 146%;
+			color: #fff;
+			position: relative;
+			&::before{
+				@media (min-width: 500px) {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					background-color: #fff;
+				}
+			}
+			@media (max-width: 992px) {
+				padding-left: 25px;
+				&::before{
+					width: 15px;
+					height: 15px;
+				}
+			}
+			@media (max-width: 767px) {
+				padding-left: 18px;
+				&::before{
+					width: 10px;
+					height: 10px;
+				}
+			}
+			@media (max-width: 500px) {
+				padding-left: 0;
+				text-align: center;
+				&::before{
+					content: '';
+					bottom: 8px;
+					left: 50%;
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					background-color: #fff;
+					transform: translateX(-50%);
+				}
+			}
+			padding-bottom: 17px;
+			@media (max-width: 500px) {
+				padding-bottom: 24px;
+			}
+		}
+	}
+}
+
+//* instagram ====================================================================================================//
+
+.instagram {
+	@include adaptiveValue("padding-top", 90, 60);
+	@include adaptiveValue("padding-bottom", 130, 50);
+	&__container {
+	}
+	&__title {
+		@include adaptiveValue("padding-bottom", 30, 15);
+		img{
+			max-width: 100%;
+		}
+	}
+	&__list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		@media (max-width: 1200px) {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+		@media (max-width: 700px) {
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		}
+		@media (max-width: 500px) {
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+			gap: 10px;
+		}
+	}
+	&__item {
+		position: relative;
+		padding-bottom: 100%;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+//* catalog ====================================================================================================//
+
+.catalog {
+	&__container {
+	}
+	&__title {
+		max-width: 490px;
+	}
+	&__body {
+		display: flex;
+		@include adaptiveValue("gap", 100, 30, 1770, 1300, 1);
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__image {
+		flex: 0 1 50%;
+		position: relative;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+			padding-bottom: 46%;
+		}
+	}
+	&__content {
+		flex: 0 1 50%;
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+		}
+	}
+}
+
+// content-catalog =================//
+
+.content-catalog {
+	&__sub-title {
+		@include adaptiveValue("font-size", 36, 18);
+		font-weight: 500;
+		line-height: 130%;
+		@include adaptiveValue("padding-bottom", 40, 10);
+		@media (max-width: 992px) {
+			max-width: 470px;
+		}
+	}
+	&__text {
+		@include adaptiveValue("font-size", 24, 16);
+		font-weight: 300;
+		line-height: 140%;
+		color: #333;
+		@include adaptiveValue("padding-bottom", 86, 30);
+		@media (max-width: 992px) {
+			max-width: 470px;
+		}
+	}
+	&__form {
+	}
+	@media (max-width: 992px) {
+		@include adaptiveValue("padding-left", 80, 0, 992, 500, 1);
+	}
+}
+
+// form-catalog =================//
+
+.form-catalog {
+	&__checkbox {
+		@include adaptiveValue("margin-bottom", 70, 35);
+	}
+}
+.form {
+	&__input {
+		border: 1px solid #000;
+		background: rgba(196, 196, 196, 0.00);
+		@include adaptiveValue("height", 90, 60);
+		width: 100%;
+		padding: 30px;
+		@include adaptiveValue("font-size", 24, 18);
+		color: #4f4f4f;
+		font-weight: 300;
+		margin-bottom: 15px;
+		@media (max-width: 992px) {
+			max-width: 440px;
+		}
+		@media (max-width: 400px) {
+			padding: 15px;
+		}
+	}
+	&__button {
+		@include adaptiveValue("height", 110, 60, 1770, 500, 1);
+		width: 100%;
+		@media (max-width: 992px) {
+			max-width: 440px;
+		}
+	}
+}
+.checkbox {
+	&__input {
+		display: none;
+	}
+	&__label {
+		cursor: pointer;
+		user-select: none;
+		color: #333;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 130%;
+		position: relative;
+		padding-left: 30px;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 17px;
+			height: 17px;
+			background-color: #fff;
+			border: 1px solid #333;
+		}
+		a{
+			text-decoration: underline;
+			&:hover{
+				color: #000;
+			}
+		}
+	}
+}
+
+.checkbox__input:checked + .checkbox__label{
+	&::before{
+		background-color: #333;
+	}
+}
