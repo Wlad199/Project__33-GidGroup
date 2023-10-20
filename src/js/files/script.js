@@ -8,3 +8,10 @@ import { flsModules } from "./modules.js";
 //$(document).ready(function () {
 //	$('.comment__body').slick();
 //})
+
+// Add class =================//
+
+$('.body-one-question__item').click(function () {
+	$('.body-one-question__item').removeClass('_active')
+	$(this).addClass('_active')
+})
