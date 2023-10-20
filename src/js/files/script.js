@@ -9,9 +9,23 @@ import { flsModules } from "./modules.js";
 //	$('.comment__body').slick();
 //})
 
-// Add class =================//
+// Add class question #1 =================//
 
 $('.body-one-question__item').click(function () {
 	$('.body-one-question__item').removeClass('_active')
+	$(this).addClass('_active')
+})
+
+
+// Add class question #2 =================//
+
+$('.item-two-body__image').click(function () {
+	$('.item-two-body__image').removeClass('_active')
+	$(this).addClass('_active')
+})
+// Add class question #3 =================//
+
+$('.item-body').click(function () {
+	$('.item-body').removeClass('_active')
 	$(this).addClass('_active')
 })

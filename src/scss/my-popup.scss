@@ -67,14 +67,12 @@
 		}
 	}
 }
-
 .question__box{
 	max-width: 1500px;
 	margin: 0 auto;
 }
 
 // top-question =================//
-
 .top-question {
 	display: flex;
 	justify-content: space-between;
@@ -103,7 +101,6 @@
 }
 
 // question-body =================//
-
 .question-body {
 }
 .body-one-question {
@@ -158,7 +155,6 @@
 }
 
 // footer-question =================//
-
 .question {
 	&__footer {
 	}
@@ -207,6 +203,321 @@
 				&:nth-child(1){
 					background-color: #FAFF09;
 				}
+		}
+	}
+}
+
+//* question-2 ====================================================================================================//
+
+#question-2{
+	.popup {
+		&__wrapper {
+		}
+		&__content {
+		}
+	}
+	.question {
+		&__box {
+		}
+		&__footer {
+			@include adaptiveValue("margin-top", 60, 30);
+		}
+	}
+	.top-question {
+		@include adaptiveValue("padding-bottom", 50, 30);
+		&__ask {
+		}
+		&__close {
+		}
+	}
+	.question-body-two {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -15px;
+		@media (max-width: 767px) {
+			margin: 0px -5px;
+		}
+	}
+	.item-two-body {
+		flex: 0 1 33.333%;
+		padding: 0px 15px;
+		padding-bottom: 18px;
+		@media (max-width: 767px) {
+			padding: 0px 5px;
+			padding-bottom: 20px;
+		}
+		@media (max-width: 500px) {
+			flex: 0 1 50%;
+		}
+		&__image {
+			padding-bottom: 58%;
+			position: relative;
+			cursor: pointer;
+			&:hover{
+				outline: 10px solid #FAFF09;
+			}
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__text {
+			text-align: center;
+			padding-top: 10px;
+			@include adaptiveValue("font-size", 24, 16);
+			color: #333;
+			font-weight: 300;
+		}
+	}
+		.footer-question {
+			&__button {
+			}
+			&__dotes {
+				a{
+					display: block;
+					width: 15px;
+					height: 15px;
+					background-color: #4f4f4f;
+					transition: all 0.3s ease 0s;
+					&:hover{
+						background: rgba(17, 17, 17, 0.90);
+					}
+					@media (max-width: 500px) {
+						width: 10px;
+						height: 10px;
+					}
+					&:nth-child(2){
+						background-color: #FAFF09;
+					}
+					&:nth-child(1){
+						background-color: #4f4f4f;
+					}
+				}
+			}
+		}
+		.item-two-body__image._active {
+			outline: 10px solid #FAFF09;
+			@media (max-width: 500px) {
+				outline: 4px solid #FAFF09;
+			}
+		}
+}
+
+//* #question-3 ====================================================================================================//
+
+#question-3{
+	.question-body {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+		@media (max-width: 992px) {
+			gap: 20px;
+		}
+	}
+	.item-body {
+		flex: 0 1 calc(50% - 20px);
+		@include adaptiveValue("height", 125, 50);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #4F4F4F;
+		color: #4F4F4F;
+		@include adaptiveValue("font-size", 36, 18);
+		font-weight: 300;
+		padding: 5px;
+		text-align: center;
+		cursor: pointer;
+		@media (max-width: 992px) {
+			flex: 0 1 calc(50% - 10px);
+		}
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
+			border: 1px solid #4F4F4F;
+		}
+		&:hover{
+			border: 1px solid #4F4F4F;
+			outline: 10px solid #FAFF09;
+			@media (max-width: 500px) {
+				outline: 4px solid #FAFF09;
+			}
+		}
+	}
+	.footer-question {
+		&__button {
+		}
+		&__dotes {
+			a{
+				&:nth-child(2){
+					background-color: #FAFF09;
+				}
+				&:nth-child(2){
+					background-color: #FAFF09;
+				}
+				&:nth-child(3){
+					background-color: #4f4f4f;
+				}
+				&:nth-child(4){
+					background-color: #FAFF09;
+				}
+			}
+		}
+	}
+	.item-body._active{
+		border: 1px solid #4F4F4F;
+		outline: 10px solid #FAFF09;
+		@media (max-width: 500px) {
+			outline: 3px solid #FAFF09;
+			background: rgba(17, 17, 17, 0.10);
+		}
+	}
+}
+
+//* #question-4 ====================================================================================================//
+
+#question-4{
+	
+.top-question {
+	@include adaptiveValue("padding-bottom", 70, 20);
+}
+
+.footer-question {
+	@include adaptiveValue("margin-top", 60, 30);
+}
+	.question-body {
+		display: flex;
+		@include adaptiveValue("gap", 150, 30, 1500, 1200, 1);
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+		&__order {
+		}
+		&__other-works {
+			flex: 0 1 50%;
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+	}
+	.other-question-body {
+		flex: 0 1 50%;
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+		}
+		&__text {
+			color: #333;
+			@include adaptiveValue("font-size", 24, 18);
+			font-weight: 500;
+			line-height: 130%;
+			@include adaptiveValue("padding-bottom", 40, 30);
+		}
+	}
+	.content-catalog {
+		&__form {
+		}
+	}
+	.form-catalog {
+		display: flex;
+		flex-direction: column;
+	}
+	.form {
+		&__input {
+		}
+		&__button {
+			@include adaptiveValue("margin-top", 110, 20, 1770, 992, 1);
+		}
+	}
+	.checkbox {
+		&__input {
+		}
+		&__label {
+		}
+	}
+	.button-black {
+	}
+	.other-works {
+		&__item {
+			display: block;
+			position: relative;
+			padding-bottom: 35%;
+			@include adaptiveValue("margin-bottom", 60, 30);
+			border: 1px solid #000;
+			cursor: pointer;
+			img{
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: all 1s ease 0s;
+				&:last-child{
+					object-fit: none;
+				}
+			}
+			&:hover{
+				img{
+					background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.20) 100%);
+				}
+			}
+		}
+		&__image {
+		}
+		&__text {
+			position: absolute;
+			z-index: 1;
+			color: #fff;
+			bottom: 25px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 18px;
+			font-weight: 500;
+			text-transform: uppercase;
+			@media (max-width: 1200px) {
+				bottom: 15px;
+			}
+		}
+	}
+	.footer-question {
+		&__button {
+			border: 1px solid #000;
+			background: rgba(196, 196, 196, 0.00);
+			//padding: 25px 100px;
+			@include adaptiveValue("padding-top", 25, 10, 1770, 650, 1);
+			@include adaptiveValue("padding-bottom", 25, 10, 1770, 650, 1);
+			@include adaptiveValue("padding-right", 130, 20, 1770, 650, 1);
+			@include adaptiveValue("padding-left", 130, 20, 1770, 650, 1);
+			@include adaptiveValue("font-size", 26, 18, 1770, 650, 1);
+			font-weight: 100;
+			transition: all 0.3s ease 0s;
+			&:hover{
+				border: 1px solid #C4C4C4;
+				background: rgba(17, 17, 17, 0.90);
+				color: #fff;
+			}
+		}
+		&__dotes {
+			a{
+				&:nth-child(2){
+					background-color: #FAFF09;
+				}
+				&:nth-child(2){
+					background-color: #FAFF09;
+				}
+				&:nth-child(3){
+					background-color: #FAFF09;
+				}
+				&:nth-child(4){
+					background-color: #4f4f4f;
+				}
+			}
+			@media (max-width: 450px) {
+				display: none;
+			}
 		}
 	}
 }
