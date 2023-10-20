@@ -1,0 +1,48 @@
+
+// callback ====================================================================================================//
+
+#callback{
+	.callback {
+		&__body {
+		}
+		&__title {
+			@include adaptiveValue("font-size", 28, 22);
+			@include adaptiveValue("padding-bottom", 45, 25);
+			text-align: center;
+		}
+		&__form {
+			text-align: center;
+		}
+		&__input{
+			max-width: 620px;
+			@include adaptiveValue("height", 80, 60);
+		}
+		&__button{
+			width: 100%;
+			max-width: 620px;
+			@include adaptiveValue("height", 110, 80);
+		}
+	}
+	.popup {
+		&__wrapper {
+		}
+		&__content {
+			max-width: 1000px;
+			border-radius: 0px;
+			@include adaptiveValue("padding-bottom", 130, 50);
+			@media (max-width: 500px) {
+				padding: 10px;
+				padding-bottom: 50px;
+			}
+		}
+		&__close {
+			margin-left: auto;
+			display: block;
+			@include adaptiveValue("margin-bottom", 30, 15);
+		}
+	}
+	.callback__form .form__error{
+		display: none;
+	}
+
+}

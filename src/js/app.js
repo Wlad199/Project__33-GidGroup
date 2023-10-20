@@ -58,14 +58,14 @@ import '../js/files/my-js/slick.min.js'
 //===================//
 
 //Попапы. Сниппет (HTML): pl
-// import './libs/popup.js'
+import './libs/popup.js'
 //===================//
 
 
 //* Работа с формами ======================================================================================//
 
 /* Работа с полями формы */
-// flsForms.formFieldsInit({ viewPass: false });
+flsForms.formFieldsInit({ viewPass: false });
 
 /* Oтправка формы */
 // flsForms.formSubmit();

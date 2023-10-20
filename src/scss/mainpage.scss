@@ -924,6 +924,7 @@
 // form-catalog =================//
 
 .form-catalog {
+	position: relative;
 	&__checkbox {
 		@include adaptiveValue("margin-bottom", 70, 35);
 	}
@@ -990,4 +991,27 @@
 	&::before{
 		background-color: #333;
 	}
+}
+
+.form__error{
+	position: absolute;
+	top: -30px;
+	left: 0;
+	color: red;
+	@include adaptiveValue("font-size", 16, 14);
+	@media (max-width: 500px) {
+		top: -20px;
+	}
+}
+._form-error{
+	color: red;
+}
+
+.form__input._form-focus{
+	color: #000;
+	border: 1px solid #000;
+	//border: none;
+}
+.form__input._form-error{
+	border: 1px solid red;
 }
