@@ -1,0 +1,40 @@
+.projects {
+
+	.our-projects {
+		@include adaptiveValue("padding-top", 80, 50, 1770, 767, 2);
+		@media (max-width: 767px) {
+			padding-top: 100px;
+		}
+			&__container {
+			}
+			&__title {
+			}
+			&__box {
+			}
+			&__body {
+			}
+			&__element {
+			}
+			&__item {
+			}
+			&__button {
+			}
+	}
+	
+	.item-project {
+			&__image {
+			}
+			&__button {
+			}
+			&__description {
+			}
+			&__sub-title {
+			}
+			&__param {
+			}
+			&__style {
+			}
+			&__space {
+			}
+	}
+}

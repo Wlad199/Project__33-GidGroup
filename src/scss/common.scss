@@ -1,6 +1,6 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-// Title ====================================================================================================//
+//* Title ====================================================================================================//
 
 .headline {
 	@include adaptiveValue("font-size", 48, 26);
@@ -22,6 +22,45 @@
 		}
 	}
 }
+
+//* crumbs ====================================================================================================//
+
+.crumbs {
+	//@include adaptiveValue("padding-top", 130, 80, 1770, 767, 1);
+	padding-top: 130px;
+	@media (max-width: 767px) {
+		padding-top: 80px;
+	}
+	&__container {
+	}
+	&__list{
+		display: flex;
+		align-items: center;
+		user-select: none;
+		font-size: 16px;
+		li:not(:last-child){
+			color: #666666;
+			position: relative;
+			&::after{
+				content: '/';
+				position: absolute;
+				top: 0;
+				right: 5px;
+			}
+		}
+		a{
+			padding-right: 20px;
+			transition: all 0.1s ease 0s;
+		}
+		a:hover{
+			color: #000;
+		}
+	}
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
 
 
 //* button ====================================================================================================//
@@ -58,7 +97,54 @@
 	align-items: center;
 	transition: all 0.3s ease 0s;
 	&:hover{
-		border: 1px solid #C4C4C4;
+		//border: 1px solid #C4C4C4;
 		background: rgba(17, 17, 17, 0.90);
+	}
+}
+
+//!  ====================================================================================================//
+
+//* request ====================================================================================================//
+
+.request {
+	@include adaptiveValue("padding-top", 40, 30);
+	@include adaptiveValue("padding-bottom", 40, 30);
+	border-top: 1px solid #BDBDBD;
+	border-bottom: 1px solid #BDBDBD;
+	&__container {
+		display: flex;
+		@include adaptiveValue("gap", 100, 50, 1770, 500, 1);
+		align-items: center;
+		background-color: #f2f2f2;
+		@include adaptiveValue("padding-top", 100, 40);
+		@include adaptiveValue("padding-bottom", 100, 50);
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__text {
+		flex: 0 1 50%;
+		@include adaptiveValue("font-size", 36, 18);
+		font-weight: 500;
+		line-height: 140%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+			text-align: center;
+		}
+	}
+	&__button-block{
+		flex: 0 1 50%;
+		text-align: center;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+	&__button {
+		width: 100%;
+		max-width: 670px;
+		@include adaptiveValue("height", 110, 65, 1770, 500, 1);
+		@media (max-width: 767px) {
+			max-width: 400px;
+		}
 	}
 }

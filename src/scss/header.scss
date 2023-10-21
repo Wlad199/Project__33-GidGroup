@@ -111,9 +111,9 @@ body._lock {
 	z-index: 15;
 	width: 100%;
 	transition: all 0.3s ease 0s;
-	@media (min-width: 992px) {
+	//@media (min-width: 992px) {
 		background: rgba(0, 0, 0, 0.40);
-	}
+	//}
 	@media (max-width: 767px) {
 		height: 70px;
 	}
@@ -124,6 +124,7 @@ body._lock {
 		height: 100px;
 		align-items: center;
 		justify-content: space-between;
+		transition: all 0.5s ease 0s;
 		@media (max-width: 767px) {
 			height: 70px;
 		}
@@ -211,4 +212,17 @@ body._lock {
 .header._header-scroll{
 	background: rgba(0, 0, 0, 0.80);
 	//backdrop-filter: blur(5px);
+	height: 70px;
 }
+
+.header._header-scroll .header__menu{
+	transition: all 0.1s ease 0s;
+	height: 70px;
+}
+.header._header-scroll .menu__logo{
+	align-self: center;
+	svg{
+		max-width: 120px;
+	}
+}
+
