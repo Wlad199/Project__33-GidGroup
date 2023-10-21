@@ -1,40 +1,195 @@
-.projects {
+//* projects ====================================================================================================//
 
+.projects {
 	.our-projects {
 		@include adaptiveValue("padding-top", 80, 50, 1770, 767, 2);
 		@media (max-width: 767px) {
 			padding-top: 100px;
 		}
-			&__container {
-			}
-			&__title {
-			}
-			&__box {
-			}
-			&__body {
-			}
-			&__element {
-			}
-			&__item {
-			}
-			&__button {
-			}
 	}
-	
-	.item-project {
-			&__image {
+}
+
+//! project ====================================================================================================//
+
+.project {
+}
+
+//* project-main ====================================================================================================//
+
+.project-main {
+	position: relative;
+		&__image {
+			position: relative;
+			padding-bottom: 56%;
+			@media (max-width: 500px) {
+				padding-bottom: 70%;
 			}
-			&__button {
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
-			&__description {
+		}
+		&__author {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+		}
+}
+.author-main {
+	background: rgba(0, 0, 0, 0.50);
+	@include adaptiveValue("padding-top", 45, 10);
+	@include adaptiveValue("padding-bottom", 30, 12);
+	@include adaptiveValue("padding-left", 60, 20);
+	@include adaptiveValue("padding-right", 70, 20);
+		&__title {
+			@include adaptiveValue("font-size", 36, 14);
+			color: #fff;
+			line-height: 130%;
+			padding-bottom: 12px;
+		}
+		&__label {
+			@include adaptiveValue("font-size", 28, 12);
+			color: #e0e0e0;
+			font-weight: 300;
+			@include adaptiveValue("padding-bottom", 20, 6);
+		}
+		&__space {
+			@include adaptiveValue("font-size", 24, 10);
+			font-weight: 300;
+			color: #f2f2f2;
+			@include adaptiveValue("padding-bottom", 45, 10);
+		}
+		&__person {
+			@include adaptiveValue("font-size", 24, 12);
+			font-weight: 300;
+			color: #f2f2f2;
+			line-height: 130%;
+			a{
+				color: #FAFF09;
 			}
-			&__sub-title {
-			}
-			&__param {
-			}
-			&__style {
-			}
-			&__space {
-			}
+		}
+}
+
+//* project-description ====================================================================================================//
+
+.project-description {
+	@include adaptiveValue("padding-top", 90, 15);
+	@include adaptiveValue("padding-bottom", 90, 15);
+	&__body {
+		display: flex;
+		margin: 0px -15px;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__subject {
+		flex: 0 1 33.333%;
+		padding: 0px 15px;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+			@include adaptiveValue("padding-bottom", 35, 15);
+			text-align: center;
+		}
+	}
+	&__text-block {
+		flex: 0 1 77.777%;
+		padding: 0px 15px;
+		color: #4f4f4f;
+		@include adaptiveValue("font-size", 24, 14);
+		font-weight: 300;
+		line-height: 145%;
+		p:not(:last-child){
+			@include adaptiveValue("padding-bottom", 30, 20);
+		}
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+			text-align: center;
+		}
+	}
+}
+.subject-description {
+	&__title {
+		@include adaptiveValue("font-size", 36, 18);
+		line-height: 125%;
+		padding-bottom: 5px;
+	}
+	&__label {
+		@include adaptiveValue("font-size", 28, 14);
+		font-weight: 300;
+		color: #828282;
+		@include adaptiveValue("padding-bottom", 50, 10);
+		line-height: 120%;
+	}
+	&__space {
+		@include adaptiveValue("font-size", 24, 12);
+		color: #333;
+		font-weight: 300;
+	}
+}
+
+//* gallery-one ====================================================================================================//
+
+.gallery-one {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	@media (max-width: 500px) {
+		gap: 5px;
+	}
+	&__item {
+		flex: 0 1 calc(50% - 5px);
+		position: relative;
+		padding-bottom: 50%;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&_big {
+			flex: 0 1 100%;
+		}
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
+			padding-bottom: 98%;
+		}
+	}
+}
+
+//* gallery-two ====================================================================================================//
+
+.gallery-two {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	@media (max-width: 500px) {
+		gap: 5px;
+	}
+	&__item {
+		flex: 0 1 calc(33.333% - 7px);
+		position: relative;
+		padding-bottom: 50%;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&_big {
+			flex: 0 1 100%;
+		}
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
+			padding-bottom: 98%;
+		}
 	}
 }
