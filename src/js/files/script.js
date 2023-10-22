@@ -29,3 +29,20 @@ $('.item-body').click(function () {
 	$('.item-body').removeClass('_active')
 	$(this).addClass('_active')
 })
+
+
+// page-choice =================//
+
+$('.button-description').click(function () {
+	$('.button-process').removeClass('_active')
+	$('.button-description').addClass('_active')
+	$('.project').css('display', 'block')
+	$('.process').css('display', 'none')
+})
+
+$('.button-process').click(function () {
+	$('.button-description').removeClass('_active')
+	$('.button-process').addClass('_active')
+	$('.process').css('display', 'block')
+	$('.project').css('display', 'none')
+})
