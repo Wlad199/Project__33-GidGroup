@@ -12,6 +12,7 @@
 //! project ====================================================================================================//
 
 .project {
+	display: none;
 }
 
 //* project-main ====================================================================================================//
@@ -190,6 +191,192 @@
 		@media (max-width: 500px) {
 			flex: 0 1 100%;
 			padding-bottom: 98%;
+		}
+	}
+}
+
+//! process ====================================================================================================//
+
+.process {
+}
+
+//* process-stage ====================================================================================================//
+
+.process-stage {
+	@include adaptiveValue("padding-top", 50, 20);
+	@include adaptiveValue("padding-bottom", 40, 30);
+		&__container {
+		}
+		&__body {
+			display: flex;
+			gap: 30px;
+			@media (max-width: 767px) {
+				flex-wrap: wrap;
+			}
+		}
+		&__step {
+		}
+		&__chat {
+		}
+}
+
+// step-stage =================//
+.step-stage {
+	flex: 0 1 50%;
+	@media (max-width: 767px) {
+		flex: 0 1 100%;
+	}
+		&__box {
+			display: flex;
+			@include adaptiveValue("gap", 20, 12, 1770, 767, 1);
+		}
+		&__number {
+			@include adaptiveValue("font-size", 72, 36);
+			font-weight: 300;
+		}
+		&__content {
+			max-width: 560px;
+		}
+		&__title {
+			@include adaptiveValue("font-size", 36, 18);
+			@include adaptiveValue("padding-bottom", 14, 8);
+		}
+		&__label {
+			@include adaptiveValue("font-size", 24, 16);
+			color: #4f4f4f;
+			font-weight: 300;
+			@include adaptiveValue("padding-bottom", 22, 15);
+		}
+		&__text {
+			@include adaptiveValue("font-size", 18, 14);
+			font-weight: 300;
+			color: #4f4f4f;
+			line-height: 130%;
+		}
+}
+
+// chat-stage =================//
+.chat-stage {
+	flex: 0 1 50%;
+	@media (max-width: 767px) {
+		flex: 0 1 100%;
+	}
+	&__element {
+			margin: 0 auto;
+			background-color: #e0e0e0;
+			@include adaptiveValue("padding-top", 20, 10);
+			padding-bottom: 35px;
+			@include adaptiveValue("padding-right", 40, 20);
+			@include adaptiveValue("padding-left", 40, 20);
+			max-width: 360px;
+			position: relative;
+			margin-bottom: 20px;
+			&::after{
+				content: '';
+				position: absolute;
+				bottom: -18px;
+				left: 30px;
+				width: 0;
+				height: 0;
+				border-left: 30px solid transparent;
+				border-right: 30px solid transparent;
+				border-top: 20px solid #e0e0e0;
+			}
+		}
+		&__name {
+			@include adaptiveValue("font-size", 18, 16);
+			font-weight: 300;
+			color: #828282;
+			@include adaptiveValue("padding-bottom", 36, 15);
+		}
+		&__message {
+			@include adaptiveValue("font-size", 18, 14);
+			font-weight: 300;
+			line-height: 130%;
+			color: #000;
+		}
+}
+
+// todo process-stage_two (from 2 message) =================//
+
+.process-stage_two{
+
+	.process-stage__body{
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	.step-stage{
+		@media (max-width: 992px) {
+			flex: 0 1 calc(50% - 15px);
+		}
+		@media (max-width: 600px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	.chat-stage {
+		&__element{
+			@media (max-width: 600px) {
+				margin: 0;
+			}
+		}
+		&_dark{
+			.chat-stage__element{
+				background-color: #333;
+				margin-top: 120px;
+				&::after{
+					border-top: 20px solid #333;
+					left: calc(100% - 100px);
+					//right: 30px;
+				}
+				.chat-stage__message{
+					color: #fff;
+				}
+				@media (max-width: 992px) {
+				margin: 0;
+				}
+				@media (max-width: 600px) {
+					margin-left: auto;
+					margin-top: 10px;
+				}
+			}
+		}
+		@media (max-width: 992px) {
+			flex: 0 1 calc(50% - 15px);
+		}
+		@media (max-width: 600px) {
+			flex: 0 1 100%;
+		}
+	}
+}
+
+//* process-design ====================================================================================================//
+
+.process-design {
+	&__body {
+		display: flex;
+		gap: 10px;
+		@media (max-width: 500px) {
+			flex-wrap: wrap;
+			gap: 5px;
+		}
+	}
+	&__item-ibg {
+		padding-bottom: 39%;
+		flex: 0 1 33.333%;
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
+			padding-bottom: 59%;
+		}
+	}
+	&__item {
+		&_big {
+			flex: 0 1 66.666%;
+			@media (max-width: 500px) {
+				flex: 0 1 100%;
+			}
 		}
 	}
 }
