@@ -118,8 +118,420 @@
 		line-height: 140%;
 	}
 }
-.headline {
+
+
+//* how-we-work ====================================================================================================//
+
+.how-we-work {
+	@include adaptiveValue("padding-top", 110, 50);
+	@include adaptiveValue("padding-bottom", 130, 30);
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		display: flex;
+		gap: 150px;
+		flex-wrap: wrap;
+		@include adaptiveValue("padding-top", 120, 30);
+		@media (max-width: 1400px) {
+			gap: 50px;
+		}
+		@media (max-width: 600px) {
+			gap: 35px;
+		}
+	}
+	&__item {
+		flex: 0 1 calc(33.333% - 100px);
+		@media (max-width: 1400px) {
+			flex: 0 1 calc(33.333% - 34px);
+		}
+		@media (max-width: 992px) {
+			flex: 0 1 calc(50% - 25px);
+		}
+		@media (max-width: 600px) {
+			flex: 0 1 100%;
+		}
+	}
+}
+.item-how-we-work {
+	&__box{
+		display: flex;
+		gap: 15px;
+		@include adaptiveValue("padding-bottom", 18, 5);
+	}
+	&__image {
+		flex: 0 0 30%;
+		@media (max-width: 600px) {
+			flex: 0 0 20%;
+		}
+		img{
+			max-width: 100%;
+			height: 130px;
+			@media (max-width: 767px) {
+				height: auto;
+			}
+		}
+	}
+	&__label {
+		@include adaptiveValue("font-size", 24, 18);
+		font-weight: 700;
+		span{
+			background-color: #FAFF09;
+			padding: 10px 10px;
+			display: block;
+		}
+	}
+	&__text {
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: 140%;
+		color: #4f4f4f;
+	}
 }
 
+//* you-get ====================================================================================================//
+
+.you-get {
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #f5f5f5;
+		padding-top: 40px;
+		margin: 0px -15px;
+		@include adaptiveValue("padding-bottom", 70, 40);
+		@include adaptiveValue("padding-right", 40, 0, 1770, 767, 1);
+		@include adaptiveValue("padding-left", 40, 0, 1770, 767, 1);
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__item {
+		padding: 0px 15px;
+		display: flex;
+		flex-direction: column;
+		min-height: 190px;
+		@media (max-width: 992px) {
+			flex: 0 1 50%;
+			text-align: center;
+			@include adaptiveValue("padding-bottom", 50, 30);
+		}
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
+			padding-bottom: 50px;
+			min-height: auto;
+		}
+	}
+	&__icon {
+		@include adaptiveValue("padding-bottom", 25, 10);
+		flex: 1 1 auto;
+		img{
+			max-width: 100%;
+		}
+	}
+	&__text {
+		@include adaptiveValue("font-size", 28, 18);
+		line-height: 130%;
+	}
+}
+
+//* comment ====================================================================================================//
+
+.comment {
+	@include adaptiveValue("padding-top", 70, 40);
+	@include adaptiveValue("padding-bottom", 120, 60);
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		@include adaptiveValue("padding-top", 60, 0);
+		position: relative;
+		@media (min-width: 992px) {
+			padding: 0px 60px;
+		}
+	}
+	&__item {
+		display: flex;
+		gap: 30px;
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.item-comment {
+	&__content {
+		flex: 0 1 50%;
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+			order: 2;
+		}
+	}
+	&__person {
+	}
+	&__text {
+		@include adaptiveValue("font-size", 24, 14);
+		line-height: 170%;
+		color: #4f4f4f;
+		//@include adaptiveValue("padding-bottom", 40, 30);
+	}
+	&__image-ibg {
+		flex: 0 1 50%;
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+			padding-bottom: 80%;
+			order: 1;
+		}
+	}
+	&__button{
+		border: 1px solid #000;
+		background: rgba(196, 196, 196, 0.00);
+		@include adaptiveValue("font-size", 24, 18);
+		font-weight: 300;
+		//padding: 25px 80px;
+		@include adaptiveValue("margin-top", 40, 30);
+		//display: block;
+		width: 100%;
+		max-width: 350px;
+		height: 80px;
+		transition: all 0.3s ease 0s;
+		margin-bottom: 5px;
+		&:hover{
+			background: rgba(17, 17, 17, 0.10);
+		}
+		@media (max-width: 767px) {
+			height: 60px;
+		}
+	}
+}
+.person-comment {
+	display: flex;
+	gap: 15px;
+	@include adaptiveValue("padding-bottom", 36, 20);
+	//align-items: center;
+	&__avatar {
+		border-radius: 50%;
+		overflow: hidden;
+		display: inline-block;
+		height: 200px;
+		width: 200px;
+		position: relative;
+		@media (max-width: 992px) {
+			height: 150px;
+			width: 150px;
+		}@media (max-width: 500px) {
+			height: 100px;
+			width: 100px;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__about {
+		max-width: 377px;
+	}
+	&__name {
+		@include adaptiveValue("font-size", 28, 18);
+		font-weight: 500;
+		line-height: 140%;
+		color: #333;
+		padding-bottom: 8px;
+	}
+	&__profession {
+		@include adaptiveValue("font-size", 18, 16);
+		font-weight: 300;
+		color: #4f4f4f;
+		line-height: 140%;
+		@include adaptiveValue("padding-bottom", 30, 15);
+	}
+	&__type {
+		@include adaptiveValue("font-size", 28, 16);
+		font-weight: 300;
+		line-height: 130%;
+		color: #4f4f4f;
+	}
+}
+
+//! Slider =================//
+
+///* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;	//!!! Скрыть лишние слайды
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;	//!!! Выстроить в ряд
+}
+/* Стрелки*/
+.slick-arrow{
+	display: none;
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	font-size: 0;
+	height: 50px;
+	width: 50px;
+	opacity: 0.6;
+	transition: all 0.3s ease 0s;
+	&:hover{
+		opacity: 1;
+	}
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+/* Стрелка влево */
+@media (min-width: 992px) {
+	.slick-arrow.slick-prev{
+		left: 0;
+		background: url('@img/design/icon/arrow-left.svg') 0 0 no-repeat;
+	}
+	/* Стрелка вправо */
+	.slick-arrow.slick-next{
+		right: 0;
+		background: url('@img/design/icon/arrow-right.svg') 0 0 no-repeat;
+	}
+}
+/*точки */
+.slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("margin-top", 80, 10);
+}
+.slick-dots li{
+	margin: 0px 10px;
+	list-style: none;
+}
+.slick-dots li button{
+	font-size: 0;
+	height: 20px;
+	width: 20px;
+	//border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid #000;
+}
+/* Активная точка */
+.slick-dots li.slick-active button{
+	background-color: #000;
+}
+
+//* team  ====================================================================================================//
+
+.team {
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		@include adaptiveValue("padding-top", 50, 0);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0px -15px;
+	}
+	&__item {
+		padding: 0px 15px;
+		@include adaptiveValue("padding-bottom", 80, 20);
+		flex: 0 1 50%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+	.item-comment {
+		&__person {
+			padding: 0;
+		}
+	}
+	.person-comment {
+		&__avatar {
+		}
+		&__about {
+		}
+		&__name {
+		}
+		&__profession {
+			@include adaptiveValue("padding-bottom", 15, 10);
+		}
+		&__type {
+		}
+	}
+}
+
+.blog {
+	@include adaptiveValue("padding-top", 120, 50);
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		@include adaptiveValue("padding-top", 40, 0);
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -15px;
+	}
+	&__item {
+		padding: 0px 15px;
+		flex: 0 1 50%;
+		@include adaptiveValue("padding-bottom", 90, 50);
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+	&__button {
+		height: 40px;
+		width: 100%;
+		max-width: 180px;
+		border: 1px solid #000;
+		font-weight: 300;
+		font-size: 14px;
+		background: rgba(196, 196, 196, 0.00);
+		@include adaptiveValue("margin-top", 20, 12);
+	}
+}
+.headline {
+}
+.item-blog {
+	&__box {
+		max-width: 650px;
+	}
+	&__data {
+		font-size: 14px;
+		color: #4f4f4f;
+		font-weight: 300;
+		line-height: 140%;
+		padding-bottom: 10px;
+	}
+	&__label {
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 130%;
+		@include adaptiveValue("padding-bottom", 22, 15);
+
+	}
+	&__text {
+		@include adaptiveValue("font-size", 22, 16);
+		line-height: 130%;
+		font-weight: 300;
+		color: #4f4f4f;	
+		padding-bottom: 20px;
+	}
+}
+
+//* catalog ====================================================================================================//
+
+.catalog{
+	@include adaptiveValue("padding-top", 50, 0);
+	@include adaptiveValue("padding-bottom", 120, 50);
+}
 
 }

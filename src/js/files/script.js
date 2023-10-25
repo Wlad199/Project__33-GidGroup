@@ -5,9 +5,14 @@ import { flsModules } from "./modules.js";
 
 
 // Функционал слайдера-слик (MW 3.2)
-//$(document).ready(function () {
-//	$('.comment__body').slick();
-//})
+$(document).ready(function () {
+	$('.comment__body').slick({
+		dots: true,
+		slidesToShow: 1,
+		//autoplay: true, // автовоспроизведение (false)
+		//autoplaySpeed: 1000, // скорость (3000)
+	});
+})
 
 // Add class question #1 =================//
 
