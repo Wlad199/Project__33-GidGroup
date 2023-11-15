@@ -198,8 +198,39 @@
 
 //! data-change ====================================================================================================//
 
+//[data-change]{
+//	>img{
+//		&:nth-child(1){
+//			@media (max-width: 500px) {
+//				display: none;
+//			}
+//		}
+//		&:nth-child(2){
+//			display: none;
+//			@media (max-width: 500px) {
+//				display: block;
+//			}
+//		}
+//	}
+//}
+
+//  =================//
+
 [data-change]{
 	>img{
+		&:nth-child(1){
+			@media (max-width: 500px) {
+				display: none;
+			}
+		}
+		&:nth-child(2){
+			display: none;
+			@media (max-width: 500px) {
+				display: block;
+			}
+		}
+	}
+	>picture{
 		&:nth-child(1){
 			@media (max-width: 500px) {
 				display: none;
@@ -216,8 +247,47 @@
 
 //  =================//
 
+[data-change = '2']{
+	
+	[change-1]{
+		@media (max-width: 500px) {
+			display: none;
+		}
+	}
+	[change-2]{
+		display: none;
+		@media (max-width: 500px) {
+			display: block;
+		}
+	}
+}
+
+//  =================//
+
 [data-change = "3"]{
 	>img{
+		&:nth-child(1){
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+		&:nth-child(2){
+			display: none;
+			@media (max-width: 992px) {
+				display: block;
+			}
+			@media (max-width: 500px) {
+				display: none;
+			}
+		}
+		&:nth-child(3){
+			display: none;
+			@media (max-width: 500px) {
+				display: block;
+			}
+		}
+	}
+	>picture{
 		&:nth-child(1){
 			@media (max-width: 992px) {
 				display: none;

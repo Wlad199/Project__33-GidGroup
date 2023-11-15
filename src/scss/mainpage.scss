@@ -40,6 +40,9 @@
 		&__arrow{
 			text-align: center;
 			padding: 20px 15px;
+			&:hover path{
+				fill: #FAFF09;
+			}
 		}
 		img{
 			position: absolute;

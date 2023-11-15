@@ -131,6 +131,7 @@ body._lock {
 	}
 }
 .menu {
+	user-select: none;
 	&__icon {
 		cursor: pointer;
 		position: relative;
@@ -143,6 +144,17 @@ body._lock {
 		}
 		&_close {
 			display: none;
+		}
+		svg path{
+			transition: all 0.3s ease 0s;
+		}
+		&:hover{
+			svg path{
+				fill: #FAFF09;
+			}
+			svg rect{
+				fill: #FAFF09;
+			}
 		}
 	}
 	&__logo {
@@ -192,7 +204,7 @@ body._lock {
 		@media (max-width: 550px) {
 			flex-wrap: wrap;
 			li{
-				flex: 0 1 25%
+				flex: 0 1 25%;
 			}
 		}
 	}
@@ -200,6 +212,37 @@ body._lock {
 		cursor: pointer;
 		position: relative;
 		z-index: 5;
+		svg path{
+			transition: all 0.3s ease 0s;
+		}
+		&:hover{
+			svg path{
+				fill: #FAFF09;
+			}
+		}
+	}
+}
+
+.menu__social li{
+	path {
+		transition: all 0.3s ease 0s;
+	}
+	.svg_m rect{
+		transition: all 0.3s ease 0s;
+	}
+	.svg_m path{
+		transition: all 0.3s ease 0s;
+	}
+}
+.menu__social li:hover{
+	path {
+		fill: #828282;
+	}
+	.svg_m rect{
+		fill: #828282;
+	}
+	.svg_m path{
+		fill: #000;
 	}
 }
 

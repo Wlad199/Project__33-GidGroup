@@ -239,6 +239,115 @@
 	}
 }
 
+//* team  ====================================================================================================//
+
+.team {
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		@include adaptiveValue("padding-top", 50, 0);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0px -15px;
+	}
+	&__item {
+		padding: 0px 15px;
+		@include adaptiveValue("padding-bottom", 80, 20);
+		flex: 0 1 50%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+	.item-comment {
+		&__person {
+			padding: 0;
+		}
+	}
+	.person-comment {
+		&__avatar {
+		}
+		&__about {
+		}
+		&__name {
+		}
+		&__profession {
+			@include adaptiveValue("padding-bottom", 15, 10);
+		}
+		&__type {
+		}
+	}
+}
+//* catalog ====================================================================================================//
+
+.catalog{
+	@include adaptiveValue("padding-top", 50, 0);
+	@include adaptiveValue("padding-bottom", 120, 50);
+}
+
+}
+
+//* Blog ====================================================================================================//
+
+.blog {
+	@include adaptiveValue("padding-top", 120, 50);
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		@include adaptiveValue("padding-top", 40, 0);
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -15px;
+	}
+	&__item {
+		padding: 0px 15px;
+		flex: 0 1 50%;
+		@include adaptiveValue("padding-bottom", 90, 50);
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+	&__button {
+		height: 40px;
+		width: 100%;
+		max-width: 180px;
+		border: 1px solid #000;
+		font-weight: 300;
+		font-size: 14px;
+		background: rgba(196, 196, 196, 0.00);
+		@include adaptiveValue("margin-top", 20, 12);
+	}
+}
+.item-blog {
+	&__box {
+		max-width: 650px;
+	}
+	&__data {
+		font-size: 14px;
+		color: #4f4f4f;
+		font-weight: 300;
+		line-height: 140%;
+		padding-bottom: 10px;
+	}
+	&__label {
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 130%;
+		@include adaptiveValue("padding-bottom", 22, 15);
+
+	}
+	&__text {
+		@include adaptiveValue("font-size", 22, 16);
+		line-height: 130%;
+		font-weight: 300;
+		color: #4f4f4f;	
+		padding-bottom: 20px;
+	}
+}
+
 //* comment ====================================================================================================//
 
 .comment {
@@ -424,114 +533,4 @@
 /* Активная точка */
 .slick-dots li.slick-active button{
 	background-color: #000;
-}
-
-//* team  ====================================================================================================//
-
-.team {
-	&__container {
-	}
-	&__title {
-	}
-	&__body {
-		@include adaptiveValue("padding-top", 50, 0);
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		margin: 0px -15px;
-	}
-	&__item {
-		padding: 0px 15px;
-		@include adaptiveValue("padding-bottom", 80, 20);
-		flex: 0 1 50%;
-		@media (max-width: 767px) {
-			flex: 0 1 100%;
-		}
-	}
-	.item-comment {
-		&__person {
-			padding: 0;
-		}
-	}
-	.person-comment {
-		&__avatar {
-		}
-		&__about {
-		}
-		&__name {
-		}
-		&__profession {
-			@include adaptiveValue("padding-bottom", 15, 10);
-		}
-		&__type {
-		}
-	}
-}
-
-.blog {
-	@include adaptiveValue("padding-top", 120, 50);
-	&__container {
-	}
-	&__title {
-	}
-	&__body {
-		@include adaptiveValue("padding-top", 40, 0);
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0px -15px;
-	}
-	&__item {
-		padding: 0px 15px;
-		flex: 0 1 50%;
-		@include adaptiveValue("padding-bottom", 90, 50);
-		@media (max-width: 767px) {
-			flex: 0 1 100%;
-		}
-	}
-	&__button {
-		height: 40px;
-		width: 100%;
-		max-width: 180px;
-		border: 1px solid #000;
-		font-weight: 300;
-		font-size: 14px;
-		background: rgba(196, 196, 196, 0.00);
-		@include adaptiveValue("margin-top", 20, 12);
-	}
-}
-.headline {
-}
-.item-blog {
-	&__box {
-		max-width: 650px;
-	}
-	&__data {
-		font-size: 14px;
-		color: #4f4f4f;
-		font-weight: 300;
-		line-height: 140%;
-		padding-bottom: 10px;
-	}
-	&__label {
-		@include adaptiveValue("font-size", 24, 18);
-		line-height: 130%;
-		@include adaptiveValue("padding-bottom", 22, 15);
-
-	}
-	&__text {
-		@include adaptiveValue("font-size", 22, 16);
-		line-height: 130%;
-		font-weight: 300;
-		color: #4f4f4f;	
-		padding-bottom: 20px;
-	}
-}
-
-//* catalog ====================================================================================================//
-
-.catalog{
-	@include adaptiveValue("padding-top", 50, 0);
-	@include adaptiveValue("padding-bottom", 120, 50);
-}
-
 }
