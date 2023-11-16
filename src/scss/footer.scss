@@ -210,7 +210,7 @@
 		color: #FAFF09;
 		@include adaptiveValue("font-size", 24, 18);
 		line-height: 145%;
-		@include adaptiveValue("padding-bottom", 35, 18);
+		@include adaptiveValue("padding-bottom", 35, 18, 1770, 600, 2);
 		@media (max-width: 600px) {
 			cursor: pointer;
 			user-select: none;
